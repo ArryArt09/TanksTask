@@ -171,7 +171,6 @@ GameObject:
   - component: {fileID: 2740258589200441209}
   - component: {fileID: 2839901929837507549}
   - component: {fileID: 4987022780785048347}
-  - component: {fileID: 450460734846834734}
   m_Layer: 9
   m_Name: Tank
   m_TagString: Untagged
@@ -259,8 +258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tanks.Complete.TankMovement
   m_PlayerNumber: 1
-  m_Speed: 14
-  m_TurnSpeed: 210
+  m_Speed: 8
+  m_TurnSpeed: 160
   m_IsDirectControl: 0
   m_MovementAudio: {fileID: 2740258589200441209}
   m_EngineIdling: {fileID: 8300000, guid: 4932ab25b84dd7649b80af68a9660ddc, type: 3}
@@ -290,8 +289,8 @@ MonoBehaviour:
   m_MaxLaunchForce: 20
   m_MaxChargeTime: 0.5
   m_ShotCooldown: 0.25
-  m_MaxDamage: 125
-  m_ExplosionForce: 25
+  m_MaxDamage: 100
+  m_ExplosionForce: 50
   m_ExplosionRadius: 5
   m_InputUser: {fileID: 0}
 --- !u!82 &2740258589200441209
@@ -303,7 +302,7 @@ AudioSource:
   m_GameObject: {fileID: 5156906785239011821}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 5601046021892096013, guid: 55f4898667c88684dbfe28f636f49346, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -400,7 +399,7 @@ AudioSource:
   m_GameObject: {fileID: 5156906785239011821}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 382030414279946420, guid: 55f4898667c88684dbfe28f636f49346, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -500,26 +499,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030896d0325fa3e4d8d7d4cfe2351cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tanks.Complete.TankHealth
-  m_StartingHealth: 500
+  m_StartingHealth: 100
   m_Slider: {fileID: 4537603654485775221}
   m_FillImage: {fileID: 4958585499048186489}
-  m_FullHealthColor: {r: 0.9960785, g: 0.4666667, b: 0.36862746, a: 1}
-  m_ZeroHealthColor: {r: 0.44705886, g: 0.08235294, b: 0.011764707, a: 1}
+  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
   m_ExplosionPrefab: {fileID: 151086, guid: 6bc6d0dd8b8428e4ca316513f2cf13c6, type: 3}
   m_HasShield: 0
---- !u!114 &450460734846834734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5156906785239011821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613fdb3d456dfe940b92c5fe402374b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tanks.Complete.PowerUpDetector
-  m_HasActivePowerUp: 0
 --- !u!1 &5495472901490974838
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 427261503, guid: 48fcaefda3f60410aac1f3b904885b45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab943d3d5ac38bb448fabe3cdc9516d1, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -784,18 +770,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 2612280051705893335, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2612280051705893335, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.00000023841858
-      objectReference: {fileID: 0}
-    - target: {fileID: 2612280051705893335, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000008583069
-      objectReference: {fileID: 0}
     - target: {fileID: 3088847576401942210, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -850,7 +824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7471019981129515232, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 7471019981129515232, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -870,11 +844,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7471019981129515232, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00000023841858
+      value: -3.06543
       objectReference: {fileID: 0}
     - target: {fileID: 7471019981129515232, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000038146973
+      value: 15.613612
       objectReference: {fileID: 0}
     - target: {fileID: 7471019981129515232, guid: 1d30ac653c80f4afeba76b72f7111a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
