@@ -1,14 +1,7 @@
 fileFormatVersion: 2
 guid: d8ab45ba858f142458af9a2bad8122f6
-AssetOrigin:
-  serializedVersion: 1
-  productId: 46209
-  packageName: Tanks! | Complete Project
-  packageVersion: 3.0
-  assetPath: Assets/_Tanks/Art/Models/Tanks/Tank_UFO_Model.fbx
-  uploadId: 847542
 ModelImporter:
-  serializedVersion: 24300
+  serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -16,7 +9,6 @@ ModelImporter:
     materialName: 0
     materialSearch: 2
     materialLocation: 0
-    searchTexturesGlobally: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -64,9 +56,6 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    generateMeshLods: 0
-    meshLodGenerationFlags: 0
-    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
@@ -116,3 +105,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 46209
+  packageName: Tanks! | Complete Project
+  packageVersion: 3.0
+  assetPath: Assets/_Tanks/Art/Models/Tanks/Tank_UFO_Model.fbx
+  uploadId: 847542
